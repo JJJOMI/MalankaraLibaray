@@ -1,0 +1,245 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Malankara Catholic Church Mobile App Survey Form</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAju-_FsW0v1KsFazEtxw62rEtb0J0J564&amp;libraries=places&amp;callback=initMap" async="" defer=""></script>
+        
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/58/6/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/58/6/util.js"></script></head>
+    <body style="color: rgb(0, 0, 0) !important;">
+        <style>
+                #map {
+                    height: 400px;
+                    width: 100%;
+                }
+                .controls {
+                    margin-top: 10px;
+                    border: 1px solid transparent;
+                    border-radius: 2px 0 0 2px;
+                    box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    height: 32px;
+                    outline: none;
+                    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+                }
+            </style>
+        <div class="container mt-5">
+            <div class="card">
+                <div class="card-body">
+                                <div class="table-responsive" >
+                                    <h5 style="color: crimson;"> Important! Read before you add timing.</h5>
+                       Example of Adding Services
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>No. <p style="font-size:9px ;"> Serial Number </p></th>
+                                    <th>Service <p style="font-size:9px ;"> Type of the service </p></th>
+                                    <th>Start <p style="font-size:9px ;"> Time this service starts </p></th>
+                                    <th>End <p style="font-size:9px ;"> Time this service end </p></th>
+                                    <th>Language <p style="font-size:9px ;"> Language of Liturgy/Communication </p></th>
+                                    <th>Comment <p style="font-size:9px ;"> Add any remarks, for e.g. Any special timings, exceptions etc </p></th>
+                                    <th>Days <p style="font-size:9px ;"> Mention the days of week this service is offered. All Sundays, All Weekdays or Select any specific day of a week </p></th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody style="color: rgb(129, 129, 129) !important;">
+                                                                                            <tr>
+                                            <td>1</td>
+                                            <td>Holy Mass</td>
+                                            <td>07:30</td>
+                                            <td>09:30</td>
+                                            <td>Malayalam</td>
+                                            <td>Regular Sunday Qurbano</td>
+                                            <td>All Sundays <p style="font-size:9px ; color:brown"> In this case, first qurbano will repeat every sundays, hence "All Sundays" </p></td>
+                                            <td>
+                                                <form method="POST" action="survey.php" style="display:inline;">
+                                                    <input type="hidden" name="step" value="8">
+                                                    <input type="hidden" name="index" value="0">
+                                                    <button type="submit" name="direction" value="delete_service" class="btn btn-danger btn-sm">Delete</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                                                    <tr>
+                                            <td>2</td>
+                                            <td>Holy Mass</td>
+                                            <td>11:00</td>
+                                            <td>12:45</td>
+                                            <td>Malayalam</td>
+                                            <td>Sunday Second Qurbano</td>
+                                            <td>All Sundays <p style="font-size:9px ; color:brown"> "All Sundays" selected as second qurbano is also celebrated on all sundays </p></td>
+                                            <td>
+                                                <form method="POST" action="survey.php" style="display:inline;">
+                                                    <input type="hidden" name="step" value="8">
+                                                    <input type="hidden" name="index" value="1">
+                                                    <button type="submit" name="direction" value="delete_service" class="btn btn-danger btn-sm">Delete</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                                                    <tr>
+                                            <td>3</td>
+                                            <td>Holy Mass</td>
+                                            <td>17:00</td>
+                                            <td>18:45</td>
+                                            <td>Malayalam</td>
+                                            <td>Qurbano,  First Fridays of every month <p style="font-size:9px ; color:brown"> This is a special case, even though Friday is selected, a remark is added to denote that this service is only for the first friday </p></td>
+                                            <td>Friday <p style="font-size:9px ; color:brown"> The service is only available on (first) friday, hence friday is selected. </p></td>
+                                            <td>
+                                                <form method="POST" action="survey.php" style="display:inline;">
+                                                    <input type="hidden" name="step" value="8">
+                                                    <input type="hidden" name="index" value="2">
+                                                    <button type="submit" name="direction" value="delete_service" class="btn btn-danger btn-sm">Delete</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                                                    <tr>
+                                            <td>4</td>
+                                            <td>Holy Mass</td>
+                                            <td>06:30</td>
+                                            <td>07:45</td>
+                                            <td>Malayalam</td>
+                                            <td>Daily Qurbano, Except First Fridays of Month <p style="font-size:9px ; color:brown"> Comment denotes that for first friday, there is an exception, i.e. there is no Holy Mass on First Friday Mornig 6:30 AM </p></td>
+                                            <td>All Week Days <p style="font-size:9px ; color:brown"> "All Week Days" selected as this service is Daily Holy mass celebrated on every week days </p></td>
+                                            <td>
+                                                <form method="POST" action="survey.php" style="display:inline;">
+                                                    <input type="hidden" name="step" value="8">
+                                                    <input type="hidden" name="index" value="3">
+                                                    <button type="submit" name="direction" value="delete_service" class="btn btn-danger btn-sm">Delete</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                                                    <tr>
+                                            <td>5</td>
+                                            <td>Sunday School</td>
+                                            <td>09:30</td>
+                                            <td>11:00</td>
+                                            <td>Malayalam</td>
+                                            <td>Sunday School Every Sundays</td>
+                                            <td>All Sundays <p style="font-size:9px; color:brown;"> Sunday School on every sundays </p></td>
+                                            <td>
+                                                <form method="POST" action="survey.php" style="display:inline;">
+                                                    <input type="hidden" name="step" value="8">
+                                                    <input type="hidden" name="index" value="4">
+                                                    <button type="submit" name="direction" value="delete_service" class="btn btn-danger btn-sm">Delete</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                                                    <tr>
+                                            <td>6</td>
+                                            <td>Novena</td>
+                                            <td>16:30</td>
+                                            <td>17:30</td>
+                                            <td>Malayalam</td>
+                                            <td>Novena to Our Lady of Perpetual Help</td>
+                                            <td>Saturday <p style="font-size:9px; color:brown;"> Saturdays selected as Novena service is only during Saturdays </p></td>
+                                            <td>
+                                                <form method="POST" action="survey.php" style="display:inline;">
+                                                    <input type="hidden" name="step" value="8">
+                                                    <input type="hidden" name="index" value="5">
+                                                    <button type="submit" name="direction" value="delete_service" class="btn btn-danger btn-sm">Delete</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                                                    <tr>
+                                            <td>7</td>
+                                            <td>Adoration</td>
+                                            <td>17:00</td>
+                                            <td>17:30</td>
+                                            <td>Malayalam</td>
+                                            <td>Adoration After Novena every Second Saturdays</td>
+                                            <td>Saturday <p style="font-size:9px ;color:brown ;"> Another special case with remarks for Adorations on every second Saturdays of month </p></td>
+                                            <td>
+                                                <form method="POST" action="survey.php" style="display:inline;">
+                                                    <input type="hidden" name="step" value="8">
+                                                    <input type="hidden" name="index" value="6">
+                                                    <button type="submit" name="direction" value="delete_service" class="btn btn-danger btn-sm">Delete</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                                                                </tbody>
+                        </table>
+                        
+                    </div>
+        
+                    <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="popupLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Add Service</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form method="POST" action="survey.php">
+                                        <input type="hidden" name="step" value="8">
+                                        <div class="form-group">
+                                            <label>Service</label>
+                                            <select class="form-control" name="service" required="">
+                                                <option value="Holy Mass">Holy Mass</option>
+                                                <option value="Adoration">Adoration</option>
+                                                <option value="Morning Prayers">Morning Prayers</option>
+                                                <option value="Evening Prayers">Evening Prayers</option>
+                                                <option value="Novena">Novena</option>
+                                                <option value="Sunday School">Sunday School</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Start Time</label>
+                                            <input type="time" class="form-control" name="start_time" required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>End Time</label>
+                                            <input type="time" class="form-control" name="end_time" required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Language</label>
+                                            <select class="form-control" name="language" required="">
+                                                <option value="Malayalam">Malayalam</option>
+                                                <option value="English">English</option>
+                                                <option value="Tamil">Tamil</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Remarks(e.g Adoration every first friday/Novena of St. Antony every Thursday/Novena of Blessed Virgin Mary every Saturday) </label>
+                                            <input type="text" class="form-control" name="remarks">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Select Days</label>
+                                            <select class="form-control" name="days" id="days">
+                                                <option value="All Sundays">All Sundays</option>
+                                                <option value="All Week Days">All Week Days</option>
+                                                <option value="Custom">Custom</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group" id="custom-days-group" style="display:none;">
+                                            <label>Custom Days</label>
+                                            <div class="form-check">
+                                                <div class="form-check"><input class="form-check-input" type="checkbox" name="custom_days[]" value="Sunday"> <label class="form-check-label">Sunday</label></div><div class="form-check"><input class="form-check-input" type="checkbox" name="custom_days[]" value="Monday"> <label class="form-check-label">Monday</label></div><div class="form-check"><input class="form-check-input" type="checkbox" name="custom_days[]" value="Tuesday"> <label class="form-check-label">Tuesday</label></div><div class="form-check"><input class="form-check-input" type="checkbox" name="custom_days[]" value="Wednesday"> <label class="form-check-label">Wednesday</label></div><div class="form-check"><input class="form-check-input" type="checkbox" name="custom_days[]" value="Thursday"> <label class="form-check-label">Thursday</label></div><div class="form-check"><input class="form-check-input" type="checkbox" name="custom_days[]" value="Friday"> <label class="form-check-label">Friday</label></div><div class="form-check"><input class="form-check-input" type="checkbox" name="custom_days[]" value="Saturday"> <label class="form-check-label">Saturday</label></div>                                    </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="submit" name="direction" value="next" class="btn btn-primary">Submit</button>
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div style="text-align: center;">
+                    <form method="POST" action="survey.php">
+                        <input type="hidden" name="step" value="9">
+                       
+                    </form>
+        
+                            </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        </body>
+</html>

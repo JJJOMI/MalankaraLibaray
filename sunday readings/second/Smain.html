@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>യല്‍ദാ - ദനഹാക്കാലം</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Add custom colors for divs */
+        .main-div {
+            background-color: #f8d7da; /* Light red */
+            cursor: pointer;
+        }
+        .sub-div {
+            background-color: #d1ecf1; /* Light blue */
+            cursor: pointer;
+        }
+        .nested-div {
+            background-color: #d4edda; /* Light green */
+        }
+        .card-header {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <!-- Loop through 7 main divs -->
+    <div id="mainDivs">
+        <!-- Main Div 1 -->
+        <div class="card main-div mb-2" data-bs-toggle="collapse" data-bs-target="#subDiv1">
+            <div class="card-header">
+                യല്‍ദായ്ക്കു മുമ്പുള്ള ഞായര്‍  
+            </div>
+        </div>
+        <div id="subDiv1" class="collapse">
+            <div class="card-body">
+                <!-- 3 Sub Divs for Main Div 1 -->
+                <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv1_1" onclick="window.location.href='/second/G1.html'">
+                    <div class="card-header">
+                        സുവിശേഷം
+                    </div>
+                </div>
+
+
+                <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv1_2" onclick="window.location.href=' /second/G1.html'">
+                    <div class="card-header">
+                        ലേഖനം
+                    </div>
+                </div>
+ 
+
+                <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv1_3" onclick="window.location.href='/second/O1.html '">
+                    <div class="card-header">
+                        old
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Main Div 2 -->
+        <div class="card main-div mb-2" data-bs-toggle="collapse" data-bs-target="#subDiv2">
+            <div class="card-header">
+                യല്‍ദായ്ക്കുശേഷം ഒന്നാം ഞായര്‍  
+            </div>
+        </div>
+        <div id="subDiv2" class="collapse">
+            <div class="card-body">
+                <!-- 3 Sub Divs for Main Div 2 -->
+                <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv2_1" onclick="window.location.href='/second/G2.html'">
+                    <div class="card-header">
+                        സുവിശേഷം
+                    </div>
+                </div>
+
+
+                <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv2_2" onclick="window.location.href='/second/E2.html'"> 
+                    <div class="card-header">
+                        ലേഖനം
+                    </div>
+                </div>
+
+
+                <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv2_3" onclick="window.location.href='/second/O2.html'">
+                    <div class="card-header">
+                        old
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Repeat the above structure for Main Divs 3 to 7 -->
+        <!-- Ensure each sub div and nested div have unique IDs -->
+        <!-- Here, I'm adding only a snippet for Div 3 for reference -->
+
+        <!-- Main Div 3 -->
+        <div class="card main-div mb-2" data-bs-toggle="collapse" data-bs-target="#subDiv3">
+            <div class="card-header">
+                യല്‍ദായ്ക്കുശേഷം രണ്ടാം ഞായര്‍
+            </div>
+        </div>
+        <div id="subDiv3" class="collapse">
+            <div class="card-body">
+                <!-- 3 Sub Divs for Main Div 3 -->
+                <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv3_1" onclick="window.location.href='/second/G3.html'">
+                    <div class="card-header">
+                        സുവിശേഷം
+                    </div>
+                </div>
+
+
+                <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv3_2" onclick="window.location.href='/second/E3.html'">
+                    <div class="card-header">
+                        ലേഖനം
+                    </div>
+                </div>
+
+
+                <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv3_3" onclick="window.location.href='/second/O3.html'">
+                    <div class="card-header">
+                        old
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Repeat for Main Divs 4, -->
+        <div class="card main-div mb-2" data-bs-toggle="collapse" data-bs-target="#subDiv4">
+            <div class="card-header">
+                ദനഹായ്ക്കുശേഷം ഒന്നാം ഞായര്‍
+            </div>
+        </div>
+        <div id="subDiv4" class="collapse">
+            <div class="card-body">
+                <!-- 4 Sub Divs for Main Div 4 -->
+                <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv4_1" onclick="window.location.href='/second/G4.html'">
+                    <div class="card-header">
+                        സുവിശേഷം
+                    </div>
+                </div>
+
+
+                <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv4_2" onclick="window.location.href='/second/E4.html'">
+                    <div class="card-header">
+                        ലേഖനം
+                    </div>
+                </div>
+
+
+                <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv4_3" onclick="window.location.href='/second/O4.html'">
+                    <div class="card-header">
+                        Sub Div 4.3
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+                <!-- Repeat for Main Divs 5 -->
+                <div class="card main-div mb-2" data-bs-toggle="collapse" data-bs-target="#subDiv5" >
+                    <div class="card-header">
+                        ദനഹായ്ക്കുശേഷം രണ്ടാം ഞായര്‍
+                    </div>
+                </div>
+                <div id="subDiv5" class="collapse">
+                    <div class="card-body">
+                        <!-- 4 Sub Divs for Main Div 4 -->
+                        <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv5_1" onclick="window.location.href='/second/G5.html'">
+                            <div class="card-header">
+                                സുവിശേഷം
+                            </div>
+                        </div>
+
+        
+                        <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv5_2" onclick="window.location.href='/second/E5.html'">
+                            <div class="card-header">
+                                ലേഖനം
+                            </div>
+                        </div>
+
+        
+                        <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv5_3" onclick="window.location.href='/second/O5.html'">
+                            <div class="card-header">
+                                old
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                                <!-- Repeat for Main Divs 6 -->
+                <div class="card main-div mb-2" data-bs-toggle="collapse" data-bs-target="#subDiv6">
+                    <div class="card-header">
+                        ദനഹായ്ക്കുശേഷം മൂന്നാം ഞായര്‍
+                    </div>
+                </div>
+                <div id="subDiv6" class="collapse">
+                    <div class="card-body">
+                        <!-- 4 Sub Divs for Main Div 4 -->
+                        <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv6_1" onclick="window.location.href='/second/G6.html'">
+                            <div class="card-header">
+                                സുവിശേഷം
+                            </div>
+                        </div>
+
+        
+                        <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv6_2" onclick="window.location.href='/second/E6.html'">
+                            <div class="card-header">
+                                ലേഖനം
+                            </div>
+                        </div>
+
+        
+                        <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv6_3" onclick="window.location.href='/second/O6.html'">
+                            <div class="card-header">
+                                old
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                 <!-- Repeat for Main Divs 7 -->
+                <div class="card main-div mb-2" data-bs-toggle="collapse" data-bs-target="#subDiv7">
+                    <div class="card-header">
+                        ദനഹായ്ക്കുശേഷം നാലാം ഞായര്‍
+                    </div>
+                </div>
+                <div id="subDiv7" class="collapse">
+                    <div class="card-body">
+                        <!-- 4 Sub Divs for Main Div 4 -->
+                        <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv7_1" onclick="window.location.href='/second/G7.html'">
+                            <div class="card-header">
+                                സുവിശേഷം
+                            </div>
+                        </div>
+
+        
+                        <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv7_2" onclick="window.location.href='/second/E7.html'">
+                            <div class="card-header">
+                                ലേഖനം
+                            </div>
+                        </div>
+
+        
+                        <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv7_3" onclick="window.location.href='/second/O7.html'">
+                            <div class="card-header">
+                                old
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card main-div mb-2" data-bs-toggle="collapse" data-bs-target="#subDiv8">
+                    <div class="card-header">
+                        ദനഹായ്ക്കുശേഷം അഞ്ചാം ഞായര്‍
+                    </div>
+                </div>
+                <div id="subDiv8" class="collapse">
+                    <div class="card-body">
+                        <!-- 4 Sub Divs for Main Div 4 -->
+                        <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv7_1" onclick="window.location.href='/second/G8.html'">
+                            <div class="card-header">
+                                സുവിശേഷം
+                            </div>
+                        </div>
+
+        
+                        <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv7_2" onclick="window.location.href='/second/E8.html'">
+                            <div class="card-header">
+                                ലേഖനം
+                            </div>
+                        </div>
+
+        
+                        <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv7_3" onclick="window.location.href='/second/O8.html'">
+                            <div class="card-header">
+                                old
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card main-div mb-2" data-bs-toggle="collapse" data-bs-target="#subDiv9">
+                    <div class="card-header">
+                        ദനഹായ്ക്കുശേഷം ആറാം ഞായര്‍
+                    </div>
+                </div>
+                <div id="subDiv9" class="collapse">
+                    <div class="card-body">
+                        <!-- 4 Sub Divs for Main Div 4 -->
+                        <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv7_1" onclick="window.location.href='/second/G9.html'">
+                            <div class="card-header">
+                                സുവിശേഷം
+                            </div>
+                        </div>
+
+        
+                        <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv7_2" onclick="window.location.href='/second/E9.html'">
+                            <div class="card-header">
+                                ലേഖനം
+                            </div>
+                        </div>
+
+        
+                        <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv7_3" onclick="window.location.href='/second/O9.html'">
+                            <div class="card-header">
+                                old
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                
+                <div class="card main-div mb-2" data-bs-toggle="collapse" data-bs-target="#subDiv10">
+                    <div class="card-header">
+                        കൊഹനേ ഞായര്‍ (പരേതരായ വൈദികര്‍)
+                    </div>
+                </div>
+                <div id="subDiv10" class="collapse">
+                    <div class="card-body">
+                        <!-- 4 Sub Divs for Main Div 4 -->
+                        <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv7_1" onclick="window.location.href='/second/G10.html'">
+                            <div class="card-header">
+                                സുവിശേഷം
+                            </div>
+                        </div>
+
+        
+                        <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv7_2" onclick="window.location.href='/second/E10.html'">
+                            <div class="card-header">
+                                ലേഖനം
+                            </div>
+                        </div>
+
+        
+                        <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv7_3" onclick="window.location.href='/second/O10.html'">
+                            <div class="card-header">
+                                old
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                
+                <div class="card main-div mb-2" data-bs-toggle="collapse" data-bs-target="#subDiv11">
+                    <div class="card-header">
+                        ആനീദെ ഞായര്‍ (പരേതരായ വിശ്വാസികള്‍)
+                    </div>
+                </div>
+                <div id="subDiv11" class="collapse">
+                    <div class="card-body">
+                        <!-- 4 Sub Divs for Main Div 4 -->
+                        <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv7_1" onclick="window.location.href='/second/G11.html'">
+                            <div class="card-header">
+                                സുവിശേഷം
+                            </div>
+                        </div>
+
+        
+                        <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv7_2" onclick="window.location.href='/second/E11.html'">
+                            <div class="card-header">
+                                ലേഖനം
+                            </div>
+                        </div>
+
+        
+                        <div class="card sub-div mb-2" data-bs-toggle="collapse" data-bs-target="#nestedDiv7_3" onclick="window.location.href='/second/O11.html'">
+                            <div class="card-header">
+                                old
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+                
+
+
+
+
+
+
+        <!-- final -->
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
